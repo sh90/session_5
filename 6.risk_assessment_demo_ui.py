@@ -37,6 +37,7 @@ Iteration {iteration}:
         temperature=0.1
     )
     end_time = time.time()
+    # Access total tokens used
     tokens_used = response.usage.total_tokens
     return response.choices[0].message.content, tokens_used, end_time - start_time
 
